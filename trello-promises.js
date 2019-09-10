@@ -1,10 +1,12 @@
 function getBoard() {
   return new Promise((resolve, reject) => {
+    console.log('Fetching board...');
     setTimeout(function() {
       let board = {
         id: "def453ed",
         name: "Thanos"
       };
+      console.log('Received board');
       resolve(board);
     }, 1000);
   });
@@ -12,6 +14,7 @@ function getBoard() {
 
 function getLists(boardId) {
   return new Promise((resolve, reject) => {
+    console.log(`Fetching lists for board id ${boardId}...`);
     setTimeout(function() {
       let lists = {
         def453ed: [
@@ -41,6 +44,7 @@ function getLists(boardId) {
           }
         ]
       };
+      console.log(`Received lists for board id ${boardId}`);
       resolve(lists[boardId]);
     }, 500);
   });
@@ -48,6 +52,7 @@ function getLists(boardId) {
 
 function getCards(listId) {
   return new Promise((resolve, reject) => {
+    console.log(`Fetching cards for list id ${listId}...`);
     setTimeout(function() {
       let cards = {
         qwsa221: [
@@ -113,6 +118,7 @@ function getCards(listId) {
           }
         ]
       };
+      console.log(`Received cards for list id ${listId}`);
       resolve(cards[listId] || []);
     }, 1500);
   });

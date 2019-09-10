@@ -1,14 +1,17 @@
 function getBoard(callback) {
+  console.log('Fetching board...');
   return setTimeout(function() {
     let board = {
       id: "def453ed",
       name: "Thanos"
     };
+    console.log('Received board');
     callback(board);
   }, 1000);
 }
 
 function getLists(boardId, callback) {
+  console.log(`Fetching lists for board id ${boardId}...`);
   return setTimeout(function() {
     let lists = {
       def453ed: [
@@ -38,11 +41,13 @@ function getLists(boardId, callback) {
         }
       ]
     };
+    console.log(`Received lists for board id ${boardId}`);
     callback(lists[boardId]);
   }, 1000);
 }
 
 function getCards(listId, callback) {
+  console.log(`Fetching cards for list id ${listId}...`);
   return setTimeout(function() {
     let cards = {
       qwsa221: [
@@ -56,6 +61,7 @@ function getCards(listId, callback) {
         }
       ]
     };
+    console.log(`Received cards for list id ${listId}`);
     callback(cards[listId]);
   }, 1000);
 }
