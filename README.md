@@ -15,23 +15,27 @@ Consuming existing promises
 - Get board -> lists -> cards for all lists **simultaneously**
 
 # Promises + Async Await
-Building your own promise based functions. First, solve it using promises. Then, refactor using async await.
+Building your own promise based functions. First, solve it using promises. Then, refactor all solutions using async await.
+
+**Task 1**: Right now, the function fetchRandomNumbers can be used by passing a callback,
+Your task is to promisfy this function so that the following can be done:
+
+fetchRandomNumbers().then((randomNum) => {
+    console.log(randomNum)
+});
+
+Similarlly, do the same for the function fetchRandomString
 
 
-**NOTE**: Do not use synchronous methods like readFileSync, writeFileSync for any of the tasks.
-Do not use callbacks to implement, create your own promise based functions
 
-- Task 1: Read the zomato.json file, choose a restaurant you like, and write it to
-another file named my-fav-restaurant.json in output directory.
-read zomato.json -> write task-1.json -> print 'Task 1 done'
+**Task 2**: Fetch a random number -> add it to a sum variable and print sum-> fetch another random variable
+-> add it to the same sum variable and print the sum variable.
 
-- Task 2: Read the movies.json file, choose a movie you like, and write it to
-file named task-2-1.json in output directory, now read the zomato.json,
-and write it to a file named task-2-2.json.
-**NOTE**: You have to read the file twice, and it sequence should be
-read movies.json -> write task-2-1.json -> read movies.json -> write task-2-2.json -> print 'Task 2 done'
 
-- Task 3: Read the movies.json file, choose 2 movies you like, and write it to
-files named task-3-1.json and task-3-2.json.
-**NOTE**: You have to read the file once, and simultaneously write to the two files
-read movies.json -> task-3-1.json, write task-3-2.json -> print 'Task 3 done'
+
+**Task 3**: Fetch a random number and a random string simultaneously, concatenate their
+and print the concatenated string
+
+
+
+**Task 4**: Fetch 10 random numbers simultaneously -> and print their sum.
