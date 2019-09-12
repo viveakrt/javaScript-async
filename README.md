@@ -6,7 +6,7 @@
 - Get board -> lists -> cards for list qwsa221 and cards for list jwkh245 **simultaneously**
 - Get board -> lists -> cards for all lists **simultaneously**
 
-# Promises
+# Consuming existing Promises
 Consuming existing promises
 **trello-promises.js**
 
@@ -14,7 +14,7 @@ Consuming existing promises
 - Get board -> lists -> cards for list qwsa221 and cards for list jwkh245 **simultaneously**
 - Get board -> lists -> cards for all lists **simultaneously**
 
-# Promises + Async Await
+# Creating Promises
 Building your own promise based functions. First, solve it using promises. Then, refactor all solutions using async await.
 
 **Task 1**: Right now, the function fetchRandomNumbers can be used by passing a callback,
@@ -39,3 +39,10 @@ and print the concatenated string
 
 
 **Task 4**: Fetch 10 random numbers simultaneously -> and print their sum.
+
+# Async await
+
+**Task 1**: Complete the function userDataSerial. Send a login request for user1 -> get user profile data -> get user posts data
+
+**Task 2**: Complete the function userDataParallel. Send a login request for user1 -> get user profile data and get user posts data simultaneously
+
