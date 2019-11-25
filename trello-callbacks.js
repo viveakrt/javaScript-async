@@ -52,11 +52,63 @@ function getCards(listId, callback) {
     let cards = {
       qwsa221: [
         {
-          id: "ornd494",
+          id: "1",
           description: `Having acquired the Power Stone, one of the six Infinity Stones,from the planet Xandar`
         },
         {
-          id: "lwpw123",
+          id: "2",
+          description: `Having acquired the Power Stone, one of the six Infinity Stones,from the planet Xandar`
+        },
+        {
+          id: "3",
+          description: `Having acquired the Power Stone, one of the six Infinity Stones,from the planet Xandar`
+        }
+      ],
+      jwkh245: [
+        {
+          id: "1",
+          description: `intercept a spaceship carrying the surviving Asgardians. As they extract the Space Stone from the Tesseract, Thanos subdues Thor, overpowers Hulk, and kills Heimdall and Loki.`
+        },
+        {
+          id: "2",
+          description: `intercept a spaceship carrying the surviving Asgardians. As they extract the Space Stone from the Tesseract, Thanos subdues Thor, overpowers Hulk, and kills Heimdall and Loki.`
+        },
+        {
+          id: "3",
+          description: `intercept a spaceship carrying the surviving Asgardians. As they extract the Space Stone from the Tesseract, Thanos subdues Thor, overpowers Hulk, and kills Heimdall and Loki.`
+        },
+        {
+          id: "4",
+          description: `intercept a spaceship carrying the surviving Asgardians. As they extract the Space Stone from the Tesseract, Thanos subdues Thor, overpowers Hulk, and kills Heimdall and Loki.`
+        }
+      ],
+      azxs123: [
+        {
+          id: "1",
+          description: `intercept a spaceship carrying the surviving Asgardians. As they extract the Space Stone from the Tesseract, Thanos subdues Thor, overpowers Hulk, and kills Heimdall and Loki.`
+        },
+        {
+          id: "2",
+          description: `intercept a spaceship carrying the surviving Asgardians. As they extract the Space Stone from the Tesseract, Thanos subdues Thor, overpowers Hulk, and kills Heimdall and Loki.`
+        }
+      ],
+      cffv432: [
+        {
+          id: "1",
+          description: `intercept a spaceship carrying the surviving Asgardians. As they extract the Space Stone from the Tesseract, Thanos subdues Thor, overpowers Hulk, and kills Heimdall and Loki.`
+        },
+        {
+          id: "2",
+          description: `intercept a spaceship carrying the surviving Asgardians. As they extract the Space Stone from the Tesseract, Thanos subdues Thor, overpowers Hulk, and kills Heimdall and Loki.`
+        }
+      ],
+      ghnb768: [
+        {
+          id: "1",
+          description: `intercept a spaceship carrying the surviving Asgardians. As they extract the Space Stone from the Tesseract, Thanos subdues Thor, overpowers Hulk, and kills Heimdall and Loki.`
+        },
+        {
+          id: "2",
           description: `intercept a spaceship carrying the surviving Asgardians. As they extract the Space Stone from the Tesseract, Thanos subdues Thor, overpowers Hulk, and kills Heimdall and Loki.`
         }
       ]
