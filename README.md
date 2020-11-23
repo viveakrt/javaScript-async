@@ -15,6 +15,9 @@ Consuming existing promises
 - Get board -> lists -> cards for all lists **simultaneously**
 
 # Creating Promises
+
+**random.js**
+
 Building your own promise based functions. First, solve it using promises. Then, refactor all solutions using async await.
 
 **Task 1**: Right now, the function fetchRandomNumbers can be used by passing a callback,
@@ -41,6 +44,8 @@ and print the concatenated string
 **Task 4**: Fetch 10 random numbers simultaneously -> and print their sum.
 
 # Async await
+
+**users.js**
 
 **Task 1**: Complete the function userDataSerial. Send a login request for user1 -> get user profile data -> get user posts data
 
