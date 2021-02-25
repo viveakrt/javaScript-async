@@ -133,5 +133,15 @@ getBoard()
 	.catch((error) => console.log(error));
 
 // Task 2 board -> lists -> cards for list qwsa221 and cards for list jwkh245 simultaneously
+getBoard()
+	.then((board) => getLists(board.id))
+	.then((lists) => {
+  const qws = lists.find((element) => element.id === "qwsa221");
+  const jwk = lists.find((element) => element.id === "jwkh245");
+  return Promise.all([getCards(qws.id), getCards(jwk.id)]);
+  })
+	.then((cards) => cards.forEach((card) => console.log(card)))
+	.catch((error) => console.log(error));
 
 // Task 3 board -> lists -> cards for all lists simultaneously
+
