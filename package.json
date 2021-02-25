@@ -8,12 +8,12 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "nodemon": "^1.18.10"
-  },
   "devDependencies": {
-    "eslint": "^6.3.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.7"
   }
 }
