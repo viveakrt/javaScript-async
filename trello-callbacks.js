@@ -130,4 +130,21 @@ getBoard((board) => {
 });
 
 // Task 2 board -> lists -> cards for list qwsa221 and cards for list jwkh245 simultaneously
+getBoard( board => {
+	
+	getLists(board.id, lists => {
+
+		lists.find((element) => {
+
+		if(element.id === "qwsa221"){
+			getCards(element.id, (card) => console.log(card));
+		}
+
+		if(element.id === "jwkh245"){
+			getCards(element.id, (card) => console.log(card));
+		}
+		});
+	});
+});
+
 // Task 3 board -> lists -> cards for all lists simultaneously
