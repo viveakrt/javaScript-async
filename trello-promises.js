@@ -136,12 +136,21 @@ getBoard()
 getBoard()
 	.then((board) => getLists(board.id))
 	.then((lists) => {
-  const qws = lists.find((element) => element.id === "qwsa221");
-  const jwk = lists.find((element) => element.id === "jwkh245");
-  return Promise.all([getCards(qws.id), getCards(jwk.id)]);
-  })
-	.then((cards) => cards.forEach((card) => console.log(card)))
+		lists.forEach((element) => {
+			if (element.id === "qwsa221" || element.id === "jwkh245") {
+				getCards(element.id).then((card) => console.log(card));
+			}
+		});
+	})
 	.catch((error) => console.log(error));
 
 // Task 3 board -> lists -> cards for all lists simultaneously
 
+getBoard()
+	.then((board) => getLists(board.id))
+	.then((lists) => {
+		lists.forEach((element) => {
+			getCards(element.id).then((card) => console.log(card));
+		});
+	})
+	.catch((error) => console.log(error));
