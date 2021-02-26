@@ -73,12 +73,40 @@ Promise.all(randomNum(10))
 async function sumTwo(){
     try{
         let sum = await fetchRandomNumbers();
-        console.log(`await Sum : ${sum}`);
+        console.log(`async await Sum : ${sum}`);
         sum += await fetchRandomNumbers();
-        console.log(`await sumTwo : ${sum}`);
+        console.log(`Async Await sumTwo : ${sum}`);
     } catch (error){
         console.error(error);
     }
 }
 sumTwo();
 
+//Task 3
+async function concat(){
+    try{
+        const num = await fetchRandomNumbers();
+        const str = await fetchRandomString();
+        console.log("Async await Concatenated string : ", num + str);
+    }catch(error){
+        console.error(error);
+    }
+}
+concat();
+
+//Task 4
+async function randomNumSum(num) {
+	const random = [];
+    let sum = 0;
+	for (index = 0; index < num; index++) {
+		random.push(await fetchRandomNumbers());
+	}
+    try{
+        sum = random.reduce((acc,cur) => acc+cur);
+        console.log(`Async await Sum of 10 number : ${sum}`);
+    }catch(err){
+        console.error(err);
+    }
+	
+}
+randomNumSum(10);
