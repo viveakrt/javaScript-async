@@ -28,22 +28,38 @@ function fetchRandomString() {
 	});
 }
 
+//fetchRandomNumbers((randomNum) => console.log(randomNum));
+//fetchRandomString((randomStr) => console.log(randomStr));
+
 //using Promises
-fetchRandomNumbers((randomNum) => console.log(randomNum));
-fetchRandomString((randomStr) => console.log(randomStr));
+//Task 2
 
-fetchRandomNumbers().then((randomNum) => {
-	let sum = 0;
-	sum += randomNum;
-    console.log(`Sum is ${sum}`);
-	Promise.resolve(fetchRandomNumbers()).then((randomNum) => {
+fetchRandomNumbers()
+	.then((randomNum) => {
+		let sum = 0;
 		sum += randomNum;
-		console.log(`Random sum is ${sum}`);
-	});
-	return sum;
-})
-.catch(error => console.log(error));
+		console.log(`Sum is : ${sum}`);
+		Promise.resolve(fetchRandomNumbers()).then((randomNum) => {
+			sum += randomNum;
+			console.log(`Random sum is : ${sum}`);
+		});
+		return sum;
+	})
+	.catch((error) => console.log(error));
 
+//Task 3
+fetchRandomNumbers()
+.then(num => {
+    fetchRandomString()
+    .then(str=>{
+        console.log('Concatenated string : ',num+str);
+    });
+});
 
-
+// Promise.all([fetchRandomNumbers(), fetchRandomString()])
+// 	.then((item) => {
+// 		let concat = item.reduce((acc, curr) => acc + curr);
+// 		console.log(concat);
+// 	})
+// 	.catch((err) => console.log(err));
 
