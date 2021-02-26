@@ -123,7 +123,13 @@ getBoard((board) => {
 	getLists(board.id, (lists) => {
 		lists.find((list) => {
 			if (list.id === "qwsa221") {
-				getCards(list.id, (card) => console.log(card));
+				getCards(list.id, (card) => {
+					if(card == undefined){
+						console.log('No data');
+					}else{
+					console.log(card);
+					}
+				});
 			}
 		});
 	});
@@ -133,11 +139,7 @@ getBoard((board) => {
 getBoard((board) => {
 	getLists(board.id, (lists) => {
 		lists.find((element) => {
-			if (element.id === "qwsa221") {
-				getCards(element.id, (card) => console.log(card));
-			}
-
-			if (element.id === "jwkh245") {
+			if (element.id === "qwsa221" || element.id === "jwkh245") {
 				getCards(element.id, (card) => console.log(card));
 			}
 		});
