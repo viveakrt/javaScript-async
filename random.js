@@ -48,18 +48,22 @@ fetchRandomNumbers()
 	.catch((error) => console.log(error));
 
 //Task 3
-fetchRandomNumbers()
-.then(num => {
-    fetchRandomString()
-    .then(str=>{
-        console.log('Concatenated string : ',num+str);
-    });
+fetchRandomNumbers().then((num) => {
+	fetchRandomString().then((str) => {
+		console.log("Concatenated string : ", num + str);
+	});
 });
 
-// Promise.all([fetchRandomNumbers(), fetchRandomString()])
-// 	.then((item) => {
-// 		let concat = item.reduce((acc, curr) => acc + curr);
-// 		console.log(concat);
-// 	})
-// 	.catch((err) => console.log(err));
+//Task 4
+const randomNum = function (num) {
+	const random = [];
+	for (index = 0; index < num; index++) {
+		random.push(fetchRandomNumbers());
+	}
+	return random;
+};
 
+Promise.all(randomNum(10))
+.then(item => item.reduce((acc,cur) => acc+cur))
+.then((sum) => console.log(`Sum of 10 random number: ${sum}`))
+.catch(error => console.log(error));
