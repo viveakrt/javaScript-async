@@ -67,3 +67,18 @@ Promise.all(randomNum(10))
 .then(item => item.reduce((acc,cur) => acc+cur))
 .then((sum) => console.log(`Sum of 10 random number: ${sum}`))
 .catch(error => console.log(error));
+
+//Async Await
+//Task 2
+async function sumTwo(){
+    try{
+        let sum = await fetchRandomNumbers();
+        console.log(`await Sum : ${sum}`);
+        sum += await fetchRandomNumbers();
+        console.log(`await sumTwo : ${sum}`);
+    } catch (error){
+        console.error(error);
+    }
+}
+sumTwo();
+
